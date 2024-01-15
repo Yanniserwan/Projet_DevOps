@@ -8,7 +8,7 @@ This server use [nodejs version 16.14.2](https://nodejs.org/en/download/).
 ## Install
     
 ```bash
-git clone git@github.com:Jathoosh/MedicOnTech-Web.git
+git clone https://github.com/natdoly/Projet_DevOps.git
 cd MedicOnTech-Web
 npm install
 ```
