@@ -24,7 +24,7 @@ public class StudentResourceIT {
     void createStudent() {
         int databaseSizeBeforeCreate = studentRepository.findAll().size();
         System.out.println("student : " + studentRepository.findAll());
-        assertThat(databaseSizeBeforeCreate).isEqualTo(6);
+        assertThat(databaseSizeBeforeCreate).isEqualTo(99);
 
         Student student = new Student();
         student.setName("nathan");
