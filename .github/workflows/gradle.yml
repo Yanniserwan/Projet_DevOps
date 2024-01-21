@@ -70,7 +70,7 @@ jobs:
           name: build
           path: build/libs/server.jar
       - name: check ls
-        run: ls -la
+        run: pwd
       - name: check ls build
         run: cd build/libs && ls -la
       
