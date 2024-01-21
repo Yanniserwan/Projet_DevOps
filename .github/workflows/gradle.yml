@@ -71,6 +71,8 @@ jobs:
           path: build/libs/server.jar
       - name: check ls
         run: ls -la
+      - name: check ls build
+        run: cd build && ls -la
       
       - name: Build and push
         uses: docker/build-push-action@v5
