@@ -79,6 +79,6 @@ jobs:
         with:
           context: .
           push: true
-          tags: devopsproj/app:latest
+          tags: ${{ secrets.DOCKER_REPO }}/devopsproj:latest
 
         
