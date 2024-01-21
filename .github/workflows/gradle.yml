@@ -72,7 +72,7 @@ jobs:
       - name: check ls
         run: ls -la
       - name: check ls build
-        run: cd build && ls -la
+        run: cd build/libs && ls -la
       
       - name: Build and push
         uses: docker/build-push-action@v5
