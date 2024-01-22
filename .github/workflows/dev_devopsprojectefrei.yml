@@ -43,6 +43,9 @@ jobs:
           uses: actions/download-artifact@v3
           with:
             name: build
+        
+        - name : Run project
+          run: ./gradlew bootRun
   
         - name: Deploy to Azure Web App
           id: deploy-to-webapp
