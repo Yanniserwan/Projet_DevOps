@@ -42,7 +42,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: build
-          path: build/libs/server.jar
+          path: build/libs/
       - name: show files
         run: ls -la
 
