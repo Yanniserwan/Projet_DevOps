@@ -39,19 +39,19 @@ jobs:
         url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
   
       steps:
-        - name: Download artifact from build job
-          uses: actions/download-artifact@v3
-          with:
-            name: build
-        
-        - name : Run project
-          run: ./gradlew bootRun
-  
-        - name: Deploy to Azure Web App
-          id: deploy-to-webapp
-          uses: azure/webapps-deploy@v2
-          with:
-            app-name: 'DevOpsProjectEfrei'
-            slot-name: 'Production'
-            publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BD6BC13408746048A3DDF66BE34382E }}
-            package: '*.jar'
+          - name: Download artifact from build job
+            uses: actions/download-artifact@v3
+            with:
+              name: build
+              path: build/libs/
+          - name: show files
+            run: ls -la
+    
+          - name: Deploy to Azure Web App
+            id: deploy-to-webapp
+            uses: azure/webapps-deploy@v2
+            with:
+              app-name: 'DevOpsProjectEfrei'
+              slot-name: 'Production'
+              publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BD6BC13408746048A3DDF66BE34382E }}
+              package: 'build/libs/server.jar'
