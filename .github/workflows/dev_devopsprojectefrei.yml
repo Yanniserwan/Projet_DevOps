@@ -1,8 +1,4 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy JAR app to Azure Web App - DevOpsProjectEfrei
-
 
 on:
   push:
@@ -25,6 +21,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: Run the project
+        run: ./gradlew bootRun
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
@@ -44,6 +43,7 @@ jobs:
         with:
           name: build
           path: build/libs/
+
       - name: show files
         run: ls -la
 
