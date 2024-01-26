@@ -47,8 +47,8 @@ jobs:
           - name: show files
             run: ls -la
     
-          - name: Rename war to ROOT
-            run: mv server.jar root.jar
+          - name: Rename war to app
+            run: mv build/libs/server.jar wwwroot/app.jar
 
           - name: Deploy to Azure Web App
             id: deploy-to-webapp
@@ -57,4 +57,4 @@ jobs:
               app-name: 'DevOpsProjectEfrei'
               slot-name: 'Production'
               publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BD6BC13408746048A3DDF66BE34382E }}
-              package: 'root.jar'
+              package: 'app.jar'
