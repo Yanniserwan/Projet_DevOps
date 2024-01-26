@@ -47,6 +47,9 @@ jobs:
           - name: show files
             run: ls -la
     
+          - name: Rename war to ROOT
+            run: mv server.jar root.jar
+
           - name: Deploy to Azure Web App
             id: deploy-to-webapp
             uses: azure/webapps-deploy@v2
