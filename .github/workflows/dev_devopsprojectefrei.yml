@@ -54,4 +54,4 @@ jobs:
               app-name: 'DevOpsProjectEfrei'
               slot-name: 'Production'
               publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BD6BC13408746048A3DDF66BE34382E }}
-              package: 'server.jar'
+              package: 'build/libs/server.jar'
