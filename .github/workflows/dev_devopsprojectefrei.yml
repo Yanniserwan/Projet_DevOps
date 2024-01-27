@@ -37,23 +37,23 @@ jobs:
       environment:
         name: 'Production'
         url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-  
+        
       steps:
-          - name: Download artifact from build job
-            uses: actions/download-artifact@v3
-            with:
-              name: build
-              path: build/libs/
-          - name: show files
-            run: ls -la
-    
-          - name: Deploy to Azure Web App
-            id: deploy-to-webapp
-            uses: azure/webapps-deploy@v2
-            with:
-              app-name: 'DevOpsProjectEfrei'
+        - name: Download artifact from build job
+          uses: actions/download-artifact@v3
+          with:
+            name: build
+            path: build/libs/
+        - name: show files
+          run: ls -la
+  
+        - name: Deploy to Azure Web App
+          id: deploy-to-webapp
+          uses: azure/webapps-deploy@v2
+          with:
+              app-name: 'devopsproject'
               slot-name: 'Production'
-              package: 'build/libs/server.jar'
+              package: '*.jar'
               publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BD6BC13408746048A3DDF66BE34382E }}
               
               
