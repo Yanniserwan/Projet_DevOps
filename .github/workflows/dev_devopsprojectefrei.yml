@@ -3,7 +3,6 @@
 
 name: Build and deploy JAR app to Azure Web App - DevOpsProjectEfrei
 
-
 on:
   pull_request:
     branches:
