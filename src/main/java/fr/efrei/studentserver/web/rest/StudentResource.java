@@ -18,6 +18,10 @@ public class StudentResource {
         this.studentService = studentService;
     }
 
+    @GetMapping("/Hello")
+    public String printSimpleMessage() {
+        return "This is a simple hello message";
+    }
 
     @GetMapping("/students")
     public List<Student> getAllStudents() {
