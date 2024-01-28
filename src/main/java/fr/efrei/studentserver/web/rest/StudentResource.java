@@ -18,7 +18,7 @@ public class StudentResource {
         this.studentService = studentService;
     }
 
-    @GetMapping("/Hello")
+    @GetMapping("/simple")
     public String printSimpleMessage() {
         return "This is a simple hello message";
     }
