@@ -25,7 +25,7 @@ public class StudentResource {
 
     @GetMapping("/other")
     public String other() {
-        return "other api endpoint";
+        return "other API ENDPOINT !";
     }
 
     @GetMapping("/students")
