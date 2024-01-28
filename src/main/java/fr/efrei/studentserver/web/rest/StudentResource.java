@@ -23,6 +23,11 @@ public class StudentResource {
         return "This is a simple hello message";
     }
 
+    @GetMapping("/other")
+    public String other() {
+        return "other api endpoint";
+    }
+
     @GetMapping("/students")
     public List<Student> getAllStudents() {
         return studentService.findAll();
