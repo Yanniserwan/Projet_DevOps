@@ -34,7 +34,7 @@ public class StudentResourceIT {
         assertThat(studentList).hasSize(databaseSizeBeforeCreate + 1);
     }
 
-   /*  @Test
+    @Test
     @Transactional
     void updateStudent() {
         int databaseSizeBeforeUpdate = studentRepository.findAll().size();
@@ -46,7 +46,7 @@ public class StudentResourceIT {
 
         List<Student> studentList = studentRepository.findAll();
         assertThat(studentList).hasSize(databaseSizeBeforeUpdate);
-    }*/
+    }
 
     @Test
     @Transactional
