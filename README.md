@@ -10,3 +10,5 @@ Projet CICD web
 
 
 **to run manually docker container :** *docker run -d -p 8080:8080 server*
+
+**Web app :** https://devopsprojectefrei.azurewebsites.net (don't forget to add the endpoint)
